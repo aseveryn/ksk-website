@@ -76,6 +76,10 @@
       ct_city: "თბილისი, საქართველო",
       ct_fb: "გამოგვყევით სიახლეებისთვის",
       footer_tag: "სრული სამართლებრივი მხარდაჭერა — სამოქალაქო · ადმინისტრაციული · სისხლის სამართალი",
+      contact_write: "მოგვწერეთ",
+      ft_nav: "ნავიგაცია",
+      ft_contact: "კონტაქტი",
+      ft_rights: "ყველა უფლება დაცულია",
       doc_title: "KSK Consulting Group — იურიდიული კომპანია | თბილისი"
     },
     en: {
@@ -149,6 +153,10 @@
       ct_city: "Tbilisi, Georgia",
       ct_fb: "Follow us for updates",
       footer_tag: "Full legal support — civil · administrative · criminal law",
+      contact_write: "Write to us",
+      ft_nav: "Navigation",
+      ft_contact: "Contact",
+      ft_rights: "All rights reserved",
       doc_title: "KSK Consulting Group — Law Firm | Tbilisi"
     },
     ru: {
@@ -222,6 +230,10 @@
       ct_city: "Тбилиси, Грузия",
       ct_fb: "Подписывайтесь на новости",
       footer_tag: "Полное правовое сопровождение — гражданское · административное · уголовное право",
+      contact_write: "Напишите нам",
+      ft_nav: "Навигация",
+      ft_contact: "Контакты",
+      ft_rights: "Все права защищены",
       doc_title: "KSK Consulting Group — Юридическая компания | Тбилиси"
     }
   };

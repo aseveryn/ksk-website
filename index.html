@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;500;600;700;800;900&family=Noto+Sans+Georgian:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=5">
+  <link rel="stylesheet" href="css/style.css?v=6">
 </head>
 <body>
 
@@ -20,7 +20,16 @@
   <header class="site-header" id="top">
     <div class="header-inner">
       <a href="#top" class="brand" aria-label="KSK Consulting Group">
-        <img src="assets/img/logo-mark.png" alt="KSK Consulting Group" class="brand-logo">
+        <svg class="brand-shield" viewBox="0 0 96 116" aria-hidden="true">
+          <path d="M48 5 C37.5 12.6 24.5 17 11 18 L11 57 C11 84.5 26.5 102.8 48 111 C69.5 102.8 85 84.5 85 57 L85 18 C71.5 17 58.5 12.6 48 5 Z" fill="none" stroke="currentColor" stroke-width="5.5" stroke-linejoin="round"/>
+          <rect x="28" y="59" width="10.5" height="24" fill="#c8303a"/>
+          <rect x="42.75" y="46" width="10.5" height="37" fill="#c8303a"/>
+          <rect x="57.5" y="53" width="10.5" height="30" fill="#c8303a"/>
+        </svg>
+        <span class="brand-text">
+          <span class="brand-ksk">K<em>S</em>K</span>
+          <span class="brand-sub">Consulting&nbsp;Group</span>
+        </span>
       </a>
       <nav class="site-nav" id="siteNav" aria-label="Main navigation">
         <a href="#about" data-i18n="nav_about">ჩვენ შესახებ</a>
@@ -255,6 +264,10 @@
         <h2 class="section-title reveal" data-i18n="contact_title">დაგვიკავშირდით</h2>
         <p class="section-sub reveal" data-i18n="contact_sub">პირველი კონსულტაციისთვის მოგვწერეთ ან დაგვირეკეთ — ვმუშაობთ 24/7.</p>
       </div>
+      <div class="contact-primary reveal">
+        <a class="contact-phone-big" href="tel:+995571100022">+995 571 10 00 22</a>
+        <a href="mailto:info@ksk.ge" class="btn btn-solid" data-i18n="contact_write">მოგვწერეთ</a>
+      </div>
       <div class="contact-grid">
         <a class="contact-card reveal" href="tel:+995571100022">
           <span class="contact-label" data-i18n="ct_phone">ტელეფონი</span>
@@ -282,14 +295,51 @@
 
   <!-- ══════════ FOOTER ══════════ -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <img src="assets/img/logo-mark.png" alt="KSK Consulting Group" class="footer-logo">
-      <p class="footer-tag" data-i18n="footer_tag">სრული სამართლებრივი მხარდაჭერა — სამოქალაქო · ადმინისტრაციული · სისხლის სამართალი</p>
-      <p class="footer-copy">© <span id="year"></span> KSK Consulting Group</p>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="brand" aria-label="KSK Consulting Group">
+          <svg class="brand-shield" viewBox="0 0 96 116" aria-hidden="true">
+            <path d="M48 5 C37.5 12.6 24.5 17 11 18 L11 57 C11 84.5 26.5 102.8 48 111 C69.5 102.8 85 84.5 85 57 L85 18 C71.5 17 58.5 12.6 48 5 Z" fill="none" stroke="currentColor" stroke-width="5.5" stroke-linejoin="round"/>
+            <rect x="28" y="59" width="10.5" height="24" fill="#c8303a"/>
+            <rect x="42.75" y="46" width="10.5" height="37" fill="#c8303a"/>
+            <rect x="57.5" y="53" width="10.5" height="30" fill="#c8303a"/>
+          </svg>
+          <span class="brand-text">
+            <span class="brand-ksk">K<em>S</em>K</span>
+            <span class="brand-sub">Consulting&nbsp;Group</span>
+          </span>
+        </a>
+        <p class="footer-tag" data-i18n="footer_tag">სრული სამართლებრივი მხარდაჭერა — სამოქალაქო · ადმინისტრაციული · სისხლის სამართალი</p>
+      </div>
+      <nav class="footer-col" aria-label="Footer navigation">
+        <p class="footer-h" data-i18n="ft_nav">ნავიგაცია</p>
+        <div class="footer-nav">
+          <a href="#about" data-i18n="nav_about">ჩვენ შესახებ</a>
+          <a href="#practice" data-i18n="nav_practice">მიმართულებები</a>
+          <a href="#services" data-i18n="nav_services">მომსახურება</a>
+          <a href="#team" data-i18n="nav_team">გუნდი</a>
+          <a href="#contact" data-i18n="nav_contact">კონტაქტი</a>
+        </div>
+      </nav>
+      <div class="footer-col">
+        <p class="footer-h" data-i18n="ft_contact">კონტაქტი</p>
+        <div class="footer-contact">
+          <a href="tel:+995571100022">+995 571 10 00 22</a>
+          <a href="tel:+995591285668">+995 591 28 56 68</a>
+          <a href="mailto:info@ksk.ge">info@ksk.ge</a>
+          <p class="footer-addr"><span data-i18n="ct_addr_v">ლუარსაბ ანდრონიკაშვილის ქ. №1ა</span><br><span data-i18n="ct_city">თბილისი, საქართველო</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© <span id="year"></span> KSK Consulting Group</p>
+        <p data-i18n="ft_rights">ყველა უფლება დაცულია</p>
+      </div>
     </div>
   </footer>
 
   <div class="grain" aria-hidden="true"></div>
-  <script src="js/main.js?v=5"></script>
+  <script src="js/main.js?v=6"></script>
 </body>
 </html>
