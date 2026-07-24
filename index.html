@@ -15,14 +15,14 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+Georgian:wght@400;500;600&family=Noto+Sans+Georgian:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --paper:#f6f3ed; --paper-alt:#efebe2; --ink:#15140f;
   --accent:oklch(0.42 0.12 24); --accent-dark:oklch(0.34 0.11 24);
   --accent-light:oklch(0.78 0.09 40); --live:oklch(0.82 0.16 145);
-  --serif:'EB Garamond',Georgia,serif; --sans:'IBM Plex Sans',system-ui,sans-serif;
-  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --serif:'EB Garamond','Noto Serif Georgian',Georgia,serif; --sans:'IBM Plex Sans','Noto Sans Georgian',system-ui,sans-serif;
+  --mono:'IBM Plex Mono','Noto Sans Georgian',ui-monospace,monospace;
   --pad:44px;
 }
 *{box-sizing:border-box}
@@ -47,6 +47,9 @@ a{color:inherit}
 .head-right{display:flex;align-items:center;gap:14px}
 .langs{font:500 11px/1 var(--mono);letter-spacing:.1em;color:rgba(21,20,15,.45)}
 .langs span{color:rgba(21,20,15,.28)}
+.lang-b{cursor:pointer;font-weight:500;color:rgba(21,20,15,.45);transition:color .2s}
+.lang-b:hover{color:var(--ink)}
+.lang-b.is-on{color:var(--accent);font-weight:600}
 .wa{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;background:var(--accent);color:#fdfbf7;text-decoration:none;font:600 12px/1 var(--sans);letter-spacing:.03em;transition:background .2s,transform .2s}
 .wa:hover{background:var(--accent-dark)}
 .msgr{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border:1px solid rgba(21,20,15,.28);color:var(--ink);text-decoration:none;font:600 12px/1 var(--sans);letter-spacing:.03em;transition:border-color .2s,background .2s}
@@ -193,12 +196,12 @@ html.js-anim .rv.in{opacity:1;transform:none}
 <header class="site-head">
   <a class="brand" href="#top"><span class="brand-k">KSK</span><span class="brand-rule"></span><span class="brand-sub">Consulting Group</span></a>
   <nav class="nav">
-    <a href="#about">About</a><a href="#practice">Practice</a><a href="#services">Services</a><a href="#team">Team</a><a href="#contact">Contact</a>
+    <a href="#about" data-i18n="nav_about">About</a><a href="#practice" data-i18n="nav_practice">Practice</a><a href="#services" data-i18n="nav_services">Services</a><a href="#team" data-i18n="nav_team">Team</a><a href="#contact" data-i18n="nav_contact">Contact</a>
   </nav>
   <div class="head-right">
-    <span class="langs">EN<span> / GE / RU</span></span>
+    <span class="langs"><b class="lang-b is-on" data-lang="en">EN</b><span> / </span><b class="lang-b" data-lang="ka">GE</b><span> / </span><b class="lang-b" data-lang="ru">RU</b></span>
     <a class="msgr" href="https://www.facebook.com/messages/t/61569291357729" target="_blank" rel="noopener">Messenger</a>
-    <a class="wa" href="https://wa.me/995571100022" target="_blank" rel="noopener"><span class="dot"></span>WhatsApp us</a>
+    <a class="wa" href="https://wa.me/995571100022" target="_blank" rel="noopener"><span class="dot"></span><span data-i18n="wa_us">WhatsApp us</span></a>
   </div>
 </header>
 
@@ -206,115 +209,115 @@ html.js-anim .rv.in{opacity:1;transform:none}
   <div class="hero-bg"><img data-px="0.06" src="assets/img/hero-court.jpg" alt=""></div>
   <div class="hero-veil"></div>
   <div class="hero-body">
-    <div class="hero-kicker rv"><i></i>Law firm · Tbilisi, Georgia</div>
-    <h1 class="rv">Your rights.<br><em>Our case.</em></h1>
-    <p class="rv">Comprehensive legal support in civil, administrative and criminal matters — with strategic business planning and corporate counsel for companies operating in Georgia.</p>
+    <div class="hero-kicker rv"><i></i><span data-i18n="hero_kicker">Law firm · Tbilisi, Georgia</span></div>
+    <h1 class="rv"><span data-i18n="hero_l1">Your rights.</span><br><em data-i18n="hero_l2">Our case.</em></h1>
+    <p class="rv" data-i18n="hero_sub">Comprehensive legal support in civil, administrative and criminal matters — with strategic business planning and corporate counsel for companies operating in Georgia.</p>
     <div class="hero-cta rv">
-      <a class="btn-light" href="https://wa.me/995571100022" target="_blank" rel="noopener">Start a WhatsApp consultation <span class="mono">→</span></a>
+      <a class="btn-light" href="https://wa.me/995571100022" target="_blank" rel="noopener"><span data-i18n="hero_wa">Start a WhatsApp consultation</span>&nbsp;<span class="mono">→</span></a>
       <a class="btn-ghost" href="tel:+995571100022">+995 571 10 00 22</a>
     </div>
   </div>
 </section>
 
 <div class="stats">
-  <div class="stat"><div class="stat-n"><span data-count="4">4</span></div><div class="stat-l">Practice areas</div></div>
-  <div class="stat"><div class="stat-n"><span data-count="3">3</span></div><div class="stat-l">Managing partners</div></div>
-  <div class="stat"><div class="stat-n"><span data-count="24">24</span>/<span data-count="7">7</span></div><div class="stat-l">Availability</div></div>
-  <div class="stat"><div class="stat-n">All</div><div class="stat-l">Court instances</div></div>
+  <div class="stat"><div class="stat-n"><span data-count="4">4</span></div><div class="stat-l" data-i18n="st1">Practice areas</div></div>
+  <div class="stat"><div class="stat-n"><span data-count="3">3</span></div><div class="stat-l" data-i18n="st2">Managing partners</div></div>
+  <div class="stat"><div class="stat-n"><span data-count="24">24</span>/<span data-count="7">7</span></div><div class="stat-l" data-i18n="st3">Availability</div></div>
+  <div class="stat"><div class="stat-n" data-i18n="st4v">All</div><div class="stat-l" data-i18n="st4">Court instances</div></div>
 </div>
 
 <section class="about" id="about">
   <figure class="about-fig rv" style="margin:0">
     <img src="assets/img/team-meeting.jpg" alt="KSK Consulting Group team in a working meeting">
-    <figcaption class="about-tag">01 — ABOUT</figcaption>
+    <figcaption class="about-tag" data-i18n="about_tag">01 — ABOUT</figcaption>
   </figure>
   <div>
-    <h2 class="sec-h2 rv">A firm that stands on your side</h2>
-    <p class="lede rv">KSK Consulting Group provides full legal support in civil, administrative and criminal matters, and advises businesses on strategic planning and corporate structure — from a single filing to long-term outside counsel.</p>
+    <h2 class="sec-h2 rv" data-i18n="about_h">A firm that stands on your side</h2>
+    <p class="lede rv" data-i18n="about_lede">KSK Consulting Group provides full legal support in civil, administrative and criminal matters, and advises businesses on strategic planning and corporate structure — from a single filing to long-term outside counsel.</p>
     <div class="pillars">
-      <div class="pillar rv"><i>i</i><div><b>Court representation</b><p>Defence and representation before courts of every instance in Georgia.</p></div></div>
-      <div class="pillar rv"><i>ii</i><div><b>Business support</b><p>Legal outsourcing and corporate services for companies of any size.</p></div></div>
-      <div class="pillar rv"><i>iii</i><div><b>Reachable 24/7</b><p>Urgent matters do not wait. Neither do we.</p></div></div>
+      <div class="pillar rv"><i>i</i><div><b data-i18n="p1_t">Court representation</b><p data-i18n="p1_d">Defence and representation before courts of every instance in Georgia.</p></div></div>
+      <div class="pillar rv"><i>ii</i><div><b data-i18n="p2_t">Business support</b><p data-i18n="p2_d">Legal outsourcing and corporate services for companies of any size.</p></div></div>
+      <div class="pillar rv"><i>iii</i><div><b data-i18n="p3_t">Reachable 24/7</b><p data-i18n="p3_d">Urgent matters do not wait. Neither do we.</p></div></div>
     </div>
   </div>
 </section>
 
 <section class="practice" id="practice">
-  <div class="sec-head sec-rule rv"><span class="kicker">02</span><h2>Practice areas</h2></div>
+  <div class="sec-head sec-rule rv"><span class="kicker">02</span><h2 data-i18n="prac_h">Practice areas</h2></div>
   <div class="pgrid">
-    <div class="pcard rv"><div class="pcard-n">01</div><h3>Civil law</h3><p>Property and contractual disputes, law of obligations, damages, family and inheritance matters.</p></div>
-    <div class="pcard rv"><div class="pcard-n">02</div><h3>Administrative law</h3><p>Disputes with administrative bodies, licences and permits, representation before public institutions.</p></div>
-    <div class="pcard rv"><div class="pcard-n">03</div><h3>Criminal law</h3><p>Defence at every stage of investigation and trial — protecting the interests of witnesses, defendants and victims.</p></div>
-    <div class="pcard rv"><div class="pcard-n">04</div><h3>Business support</h3><p>Full legal outsourcing, corporate law, company registration, mergers and reorganisation.</p></div>
+    <div class="pcard rv"><div class="pcard-n">01</div><h3 data-i18n="pa1_t">Civil law</h3><p data-i18n="pa1_d">Property and contractual disputes, law of obligations, damages, family and inheritance matters.</p></div>
+    <div class="pcard rv"><div class="pcard-n">02</div><h3 data-i18n="pa2_t">Administrative law</h3><p data-i18n="pa2_d">Disputes with administrative bodies, licences and permits, representation before public institutions.</p></div>
+    <div class="pcard rv"><div class="pcard-n">03</div><h3 data-i18n="pa3_t">Criminal law</h3><p data-i18n="pa3_d">Defence at every stage of investigation and trial — protecting the interests of witnesses, defendants and victims.</p></div>
+    <div class="pcard rv"><div class="pcard-n">04</div><h3 data-i18n="pa4_t">Business support</h3><p data-i18n="pa4_d">Full legal outsourcing, corporate law, company registration, mergers and reorganisation.</p></div>
   </div>
 </section>
 
 <section class="services" id="services">
-  <div class="sec-head rv"><span class="kicker">03</span><h2>What we do</h2></div>
-  <p class="lede rv" style="max-width:560px">Services for individuals and legal entities, grouped by the work involved rather than by statute.</p>
+  <div class="sec-head rv"><span class="kicker">03</span><h2 data-i18n="svc_h">What we do</h2></div>
+  <p class="lede rv" style="max-width:560px" data-i18n="svc_lede">Services for individuals and legal entities, grouped by the work involved rather than by statute.</p>
   <div class="sgrid">
-    <div class="scard rv"><h3>Documents &amp; filings</h3><ul>
-      <li>Drafting and preparation of any legal document</li>
-      <li>Documentation in Georgian and English</li>
-      <li>Registration of legal documents with state authorities</li>
+    <div class="scard rv"><h3 data-i18n="sg1_h">Documents &amp; filings</h3><ul>
+      <li data-i18n="sg1_1">Drafting and preparation of any legal document</li>
+      <li data-i18n="sg1_2">Documentation in Georgian and English</li>
+      <li data-i18n="sg1_3">Registration of legal documents with state authorities</li>
     </ul></div>
-    <div class="scard rv"><h3>Representation &amp; recovery</h3><ul>
-      <li>Representation before public and private institutions</li>
-      <li>Obtaining licences and permits</li>
-      <li>Receivables and debt recovery proceedings</li>
+    <div class="scard rv"><h3 data-i18n="sg2_h">Representation &amp; recovery</h3><ul>
+      <li data-i18n="sg2_1">Representation before public and private institutions</li>
+      <li data-i18n="sg2_2">Obtaining licences and permits</li>
+      <li data-i18n="sg2_3">Receivables and debt recovery proceedings</li>
     </ul></div>
-    <div class="scard rv"><h3>Negotiation &amp; settlement</h3><ul>
-      <li>Negotiations on the company's behalf with individuals and entities</li>
-      <li>Commercial negotiations with partners and counterparties</li>
-      <li>Settlement and mediation</li>
+    <div class="scard rv"><h3 data-i18n="sg3_h">Negotiation &amp; settlement</h3><ul>
+      <li data-i18n="sg3_1">Negotiations on the company's behalf with individuals and entities</li>
+      <li data-i18n="sg3_2">Commercial negotiations with partners and counterparties</li>
+      <li data-i18n="sg3_3">Settlement and mediation</li>
     </ul></div>
-    <div class="scard rv"><h3>Corporate &amp; transactions</h3><ul>
-      <li>Company registration; mergers, reorganisation and acquisitions</li>
-      <li>Organising shareholder and partner meetings</li>
-      <li>Identifying legal exposure and mapping routes to resolution</li>
+    <div class="scard rv"><h3 data-i18n="sg4_h">Corporate &amp; transactions</h3><ul>
+      <li data-i18n="sg4_1">Company registration; mergers, reorganisation and acquisitions</li>
+      <li data-i18n="sg4_2">Organising shareholder and partner meetings</li>
+      <li data-i18n="sg4_3">Identifying legal exposure and mapping routes to resolution</li>
     </ul></div>
   </div>
 </section>
 
 <section class="results">
   <div class="results-body">
-    <div class="sec-head rv"><span class="kicker">04</span><h2 class="sec-h2" style="font-size:38px">Matters concluded successfully</h2></div>
-    <p class="rv">Cases conducted by our team are resolved in the courts of Georgia — including the civil and criminal chambers of the Tbilisi and Rustavi City Courts. Every case is a responsibility; every result, a foundation of trust.</p>
-    <a class="link-accent rv" href="https://www.facebook.com/people/KSK-Consulting-Group/61569291357729/" target="_blank" rel="noopener">Recent results on Facebook <span class="mono">↗</span></a>
+    <div class="sec-head rv"><span class="kicker">04</span><h2 class="sec-h2" style="font-size:38px" data-i18n="res_h">Matters concluded successfully</h2></div>
+    <p class="rv" data-i18n="res_p">Cases conducted by our team are resolved in the courts of Georgia — including the civil and criminal chambers of the Tbilisi and Rustavi City Courts. Every case is a responsibility; every result, a foundation of trust.</p>
+    <a class="link-accent rv" href="https://www.facebook.com/people/KSK-Consulting-Group/61569291357729/" target="_blank" rel="noopener"><span data-i18n="res_link">Recent results on Facebook</span>&nbsp;<span class="mono">↗</span></a>
   </div>
   <div class="results-fig"><img src="assets/img/case-won.jpg" alt="A successfully concluded case — KSK Consulting Group"></div>
 </section>
 
 <section class="team" id="team">
-  <div class="sec-head sec-rule rv"><span class="kicker">05</span><h2>The team</h2><span class="team-note">Experienced attorneys defending your interests.</span></div>
+  <div class="sec-head sec-rule rv"><span class="kicker">05</span><h2 data-i18n="team_h">The team</h2><span class="team-note" data-i18n="team_note">Experienced attorneys defending your interests.</span></div>
   <div class="tgrid">
-    <div class="tcard rv"><figure><img src="assets/img/partner-desk.jpg" alt="Lazare Kakushadze"></figure><h3>Lazare Kakushadze</h3><div class="trole">Managing partner · Attorney</div></div>
-    <div class="tcard rv"><figure><img src="assets/img/vakhtang.jpg?v=5" alt="Vakhtang Kvizhinadze"></figure><h3>Vakhtang Kvizhinadze</h3><div class="trole">Managing partner · Attorney</div><p>Criminal, civil and administrative law</p></div>
-    <div class="tcard rv"><figure><img src="assets/img/giorgi.jpg?v=4" alt="Giorgi Samushia"></figure><h3>Giorgi Samushia</h3><div class="trole">Managing partner · Attorney</div><p>Criminal law</p></div>
+    <div class="tcard rv"><figure><img src="assets/img/partner-desk.jpg" alt="Lazare Kakushadze"></figure><h3 data-i18n="tm1_n">Lazare Kakushadze</h3><div class="trole" data-i18n="role">Managing partner · Attorney</div></div>
+    <div class="tcard rv"><figure><img src="assets/img/vakhtang.jpg?v=5" alt="Vakhtang Kvizhinadze"></figure><h3 data-i18n="tm2_n">Vakhtang Kvizhinadze</h3><div class="trole" data-i18n="role">Managing partner · Attorney</div><p data-i18n="tm2_s">Criminal, civil and administrative law</p></div>
+    <div class="tcard rv"><figure><img src="assets/img/giorgi.jpg?v=4" alt="Giorgi Samushia"></figure><h3 data-i18n="tm3_n">Giorgi Samushia</h3><div class="trole" data-i18n="role">Managing partner · Attorney</div><p data-i18n="tm3_s">Criminal law</p></div>
   </div>
 </section>
 
 <section class="contact" id="contact">
   <div>
-    <div class="sec-head rv"><span class="kicker">06</span><h2>Talk to a lawyer today</h2></div>
-    <p class="contact-lede rv">Send a message or call for a first consultation. We answer 24/7 — in Georgian or English.</p>
+    <div class="sec-head rv"><span class="kicker">06</span><h2 data-i18n="ct_h">Talk to a lawyer today</h2></div>
+    <p class="contact-lede rv" data-i18n="ct_lede">Send a message or call for a first consultation. We answer 24/7 — in Georgian or English.</p>
     <div class="cta-pair rv">
-      <a class="btn-accent" href="https://wa.me/995571100022" target="_blank" rel="noopener"><span class="dot" style="width:7px;height:7px"></span>Message us on WhatsApp</a>
-      <a class="btn-outline" href="https://www.facebook.com/messages/t/61569291357729" target="_blank" rel="noopener">Message on Facebook</a>
+      <a class="btn-accent" href="https://wa.me/995571100022" target="_blank" rel="noopener"><span class="dot" style="width:7px;height:7px"></span><span data-i18n="wa_btn">Message us on WhatsApp</span></a>
+      <a class="btn-outline" href="https://www.facebook.com/messages/t/61569291357729" target="_blank" rel="noopener"><span data-i18n="fb_btn">Message on Facebook</span></a>
     </div>
-    <div class="reply rv">Typical reply: under 15 minutes</div>
+    <div class="reply rv" data-i18n="reply_note">Typical reply: under 15 minutes</div>
   </div>
   <dl style="margin:0;display:grid">
-    <a class="crow rv" href="tel:+995571100022"><dt>Phone</dt><dd>+995 571 10 00 22<br>+995 591 28 56 68</dd></a>
-    <a class="crow rv" href="mailto:info@ksk.ge"><dt>Email</dt><dd>info@ksk.ge<br>kakushadze@ksk.ge</dd></a>
-    <a class="crow rv" href="https://maps.google.com/?q=1a+Luarsab+Andronikashvili+Street,+Tbilisi,+Georgia" target="_blank" rel="noopener"><dt>Office</dt><dd>1a Luarsab Andronikashvili St.<br>Tbilisi, Georgia</dd></a>
+    <a class="crow rv" href="tel:+995571100022"><dt data-i18n="ct_phone">Phone</dt><dd>+995 571 10 00 22<br>+995 591 28 56 68</dd></a>
+    <a class="crow rv" href="mailto:info@ksk.ge"><dt data-i18n="ct_mail">Email</dt><dd>info@ksk.ge<br>kakushadze@ksk.ge</dd></a>
+    <a class="crow rv" href="https://maps.google.com/?q=1a+Luarsab+Andronikashvili+Street,+Tbilisi,+Georgia" target="_blank" rel="noopener"><dt data-i18n="ct_office">Office</dt><dd><span data-i18n="ct_addr">1a Luarsab Andronikashvili St.</span><br><span data-i18n="ct_city">Tbilisi, Georgia</span></dd></a>
     <a class="crow rv" href="https://www.facebook.com/people/KSK-Consulting-Group/61569291357729/" target="_blank" rel="noopener"><dt>Facebook</dt><dd>KSK Consulting Group</dd></a>
   </dl>
 </section>
 
 <footer class="site-foot">
   <a class="brand" href="#top"><span class="brand-k">KSK</span><span class="brand-rule"></span><span class="brand-sub">Consulting Group</span></a>
-  <span>Full legal support — civil · administrative · criminal law</span>
+  <span data-i18n="foot_tag">Full legal support — civil · administrative · criminal law</span>
   <span class="copy">© 2026 KSK Consulting Group</span>
 </footer>
 
@@ -382,6 +385,154 @@ html.js-anim .rv.in{opacity:1;transform:none}
     window.addEventListener('scroll',function(){ if(!queued){queued=true;requestAnimationFrame(apply);} },{passive:true});
     apply();
   }
+})();
+</script>
+<script>
+(function(){
+  var I18N = {
+    en: null, /* built from the DOM on first run */
+    ka: {
+      doc_title:"KSK Consulting Group — იურიდიული კომპანია თბილისში",
+      nav_about:"ჩვენ შესახებ", nav_practice:"მიმართულებები", nav_services:"მომსახურება", nav_team:"გუნდი", nav_contact:"კონტაქტი",
+      wa_us:"მოგვწერეთ WhatsApp-ში",
+      hero_kicker:"იურიდიული კომპანია · თბილისი, საქართველო",
+      hero_l1:"თქვენი უფლებები.", hero_l2:"ჩვენი საქმე.",
+      hero_sub:"სრული სამართლებრივი მხარდაჭერა სამოქალაქო, ადმინისტრაციულ და სისხლის სამართლის საქმეებში — ბიზნესის სტრატეგიული დაგეგმარება და კორპორატიული მხარდაჭერა საქართველოში მოქმედი კომპანიებისთვის.",
+      hero_wa:"დაიწყეთ კონსულტაცია WhatsApp-ში",
+      st1:"პრაქტიკის მიმართულება", st2:"მმართველი პარტნიორი", st3:"ხელმისაწვდომობა", st4:"სასამართლო ინსტანცია", st4v:"ყველა",
+      about_tag:"01 — ჩვენ შესახებ",
+      about_h:"კომპანია, რომელიც თქვენს მხარეს დგას",
+      about_lede:"KSK Consulting Group უზრუნველყოფს სრულ სამართლებრივ მხარდაჭერას სამოქალაქო, ადმინისტრაციულ და სისხლის სამართლის საქმეებში და ბიზნესს სთავაზობს სტრატეგიულ დაგეგმარებასა და კორპორატიულ მომსახურებას — ერთი დოკუმენტიდან გრძელვადიან იურიდიულ თანხლებამდე.",
+      p1_t:"სასამართლო წარმომადგენლობა", p1_d:"დაცვა და წარმომადგენლობა საქართველოს ყველა ინსტანციის სასამართლოში.",
+      p2_t:"ბიზნესის მხარდაჭერა", p2_d:"იურიდიული აუთსორსი და კორპორატიული მომსახურება ნებისმიერი ზომის კომპანიისთვის.",
+      p3_t:"ხელმისაწვდომი 24/7", p3_d:"გადაუდებელი საქმეები არ იცდიან. არც ჩვენ.",
+      prac_h:"პრაქტიკის მიმართულებები",
+      pa1_t:"სამოქალაქო სამართალი", pa1_d:"ქონებრივი და სახელშეკრულებო დავები, ვალდებულებითი სამართალი, ზიანის ანაზღაურება, საოჯახო და მემკვიდრეობის საქმეები.",
+      pa2_t:"ადმინისტრაციული სამართალი", pa2_d:"დავები ადმინისტრაციულ ორგანოებთან, ლიცენზიები და ნებართვები, წარმომადგენლობა საჯარო დაწესებულებებში.",
+      pa3_t:"სისხლის სამართალი", pa3_d:"დაცვა გამოძიებისა და სასამართლო განხილვის ყველა ეტაპზე — მოწმის, ბრალდებულისა და დაზარალებულის ინტერესების დაცვა.",
+      pa4_t:"ბიზნესის მხარდაჭერა", pa4_d:"სრული იურიდიული აუთსორსი, კორპორატიული სამართალი, კომპანიების რეგისტრაცია, შერწყმა და რეორგანიზაცია.",
+      svc_h:"რას ვაკეთებთ",
+      svc_lede:"მომსახურება ფიზიკური და იურიდიული პირებისთვის — დაჯგუფებული შესასრულებელი სამუშაოს მიხედვით.",
+      sg1_h:"დოკუმენტები და განაცხადები",
+      sg1_1:"ნებისმიერი იურიდიული დოკუმენტის შედგენა და მომზადება",
+      sg1_2:"დოკუმენტაცია ქართულ და ინგლისურ ენებზე",
+      sg1_3:"სამართლებრივი დოკუმენტების რეგისტრაცია სახელმწიფო ორგანოებში",
+      sg2_h:"წარმომადგენლობა და დავალიანების ამოღება",
+      sg2_1:"წარმომადგენლობა საჯარო და კერძო დაწესებულებებში",
+      sg2_2:"ლიცენზიებისა და ნებართვების მოპოვება",
+      sg2_3:"დებიტორული დავალიანების ამოღების წარმოება",
+      sg3_h:"მოლაპარაკება და მორიგება",
+      sg3_1:"მოლაპარაკებები კომპანიის სახელით ფიზიკურ და იურიდიულ პირებთან",
+      sg3_2:"კომერციული მოლაპარაკებები პარტნიორებთან და კონტრაჰენტებთან",
+      sg3_3:"მორიგება და მედიაცია",
+      sg4_h:"კორპორატიული საკითხები და გარიგებები",
+      sg4_1:"კომპანიის რეგისტრაცია; შერწყმა, რეორგანიზაცია და შესყიდვები",
+      sg4_2:"პარტნიორთა და აქციონერთა კრებების ორგანიზება",
+      sg4_3:"სამართლებრივი რისკების იდენტიფიცირება და გადაჭრის გზების დასახვა",
+      res_h:"წარმატებით დასრულებული საქმეები",
+      res_p:"ჩვენი გუნდის მიერ წარმოებული საქმეები წყდება საქართველოს სასამართლოებში — მათ შორის თბილისისა და რუსთავის საქალაქო სასამართლოების სამოქალაქო და სისხლის სამართლის კოლეგიებში. თითოეული საქმე პასუხისმგებლობაა; თითოეული შედეგი — ნდობის საფუძველი.",
+      res_link:"ბოლო შედეგები Facebook-ზე",
+      team_h:"გუნდი", team_note:"გამოცდილი ადვოკატები, რომლებიც თქვენს ინტერესებს იცავენ.",
+      tm1_n:"ლაზარე კაკუშაძე", tm2_n:"ვახტანგ კვიჟინაძე", tm3_n:"გიორგი სამუშია",
+      role:"მმართველი პარტნიორი · ადვოკატი",
+      tm2_s:"სისხლის, სამოქალაქო და ადმინისტრაციული სამართალი",
+      tm3_s:"სისხლის სამართალი",
+      ct_h:"ესაუბრეთ ადვოკატს დღესვე",
+      ct_lede:"მოგვწერეთ ან დაგვირეკეთ პირველი კონსულტაციისთვის. ვპასუხობთ 24/7 — ქართულ და ინგლისურ ენებზე.",
+      wa_btn:"მოგვწერეთ WhatsApp-ში", fb_btn:"მოგვწერეთ Facebook-ზე",
+      reply_note:"პასუხი, როგორც წესი, 15 წუთში",
+      ct_phone:"ტელეფონი", ct_mail:"ელფოსტა", ct_office:"ოფისი",
+      ct_addr:"ლუარსაბ ანდრონიკაშვილის ქ. №1ა", ct_city:"თბილისი, საქართველო",
+      foot_tag:"სრული სამართლებრივი მხარდაჭერა — სამოქალაქო · ადმინისტრაციული · სისხლის სამართალი"
+    },
+    ru: {
+      doc_title:"KSK Consulting Group — Юридическая фирма в Тбилиси",
+      nav_about:"О нас", nav_practice:"Практика", nav_services:"Услуги", nav_team:"Команда", nav_contact:"Контакты",
+      wa_us:"Напишите в WhatsApp",
+      hero_kicker:"Юридическая фирма · Тбилиси, Грузия",
+      hero_l1:"Ваши права.", hero_l2:"Наше дело.",
+      hero_sub:"Полное правовое сопровождение по гражданским, административным и уголовным делам — со стратегическим планированием бизнеса и корпоративным сопровождением компаний, работающих в Грузии.",
+      hero_wa:"Начните консультацию в WhatsApp",
+      st1:"Направления практики", st2:"Управляющих партнёра", st3:"Доступность", st4:"Судебные инстанции", st4v:"Все",
+      about_tag:"01 — О НАС",
+      about_h:"Компания, которая на вашей стороне",
+      about_lede:"KSK Consulting Group обеспечивает полное правовое сопровождение по гражданским, административным и уголовным делам и консультирует бизнес по стратегическому планированию и корпоративной структуре — от одного документа до долгосрочного юридического сопровождения.",
+      p1_t:"Представительство в суде", p1_d:"Защита и представительство в судах всех инстанций Грузии.",
+      p2_t:"Поддержка бизнеса", p2_d:"Юридический аутсорсинг и корпоративные услуги для компаний любого размера.",
+      p3_t:"На связи 24/7", p3_d:"Срочные дела не ждут. Мы тоже.",
+      prac_h:"Направления практики",
+      pa1_t:"Гражданское право", pa1_d:"Имущественные и договорные споры, обязательственное право, возмещение ущерба, семейные и наследственные дела.",
+      pa2_t:"Административное право", pa2_d:"Споры с административными органами, лицензии и разрешения, представительство в государственных учреждениях.",
+      pa3_t:"Уголовное право", pa3_d:"Защита на всех этапах следствия и судебного разбирательства — защита интересов свидетелей, обвиняемых и потерпевших.",
+      pa4_t:"Поддержка бизнеса", pa4_d:"Полный юридический аутсорсинг, корпоративное право, регистрация компаний, слияния и реорганизация.",
+      svc_h:"Что мы делаем",
+      svc_lede:"Услуги для физических и юридических лиц, сгруппированные по характеру работы.",
+      sg1_h:"Документы и подача",
+      sg1_1:"Составление и подготовка любых юридических документов",
+      sg1_2:"Документация на грузинском и английском языках",
+      sg1_3:"Регистрация юридических документов в государственных органах",
+      sg2_h:"Представительство и взыскание",
+      sg2_1:"Представительство в государственных и частных учреждениях",
+      sg2_2:"Получение лицензий и разрешений",
+      sg2_3:"Взыскание дебиторской задолженности",
+      sg3_h:"Переговоры и урегулирование",
+      sg3_1:"Переговоры от имени компании с физическими и юридическими лицами",
+      sg3_2:"Коммерческие переговоры с партнёрами и контрагентами",
+      sg3_3:"Мировое соглашение и медиация",
+      sg4_h:"Корпоративное право и сделки",
+      sg4_1:"Регистрация компаний; слияния, реорганизация и поглощения",
+      sg4_2:"Организация собраний акционеров и партнёров",
+      sg4_3:"Выявление правовых рисков и определение путей их решения",
+      res_h:"Успешно завершённые дела",
+      res_p:"Дела, которые ведёт наша команда, разрешаются в судах Грузии — включая гражданскую и уголовную коллегии городских судов Тбилиси и Рустави. Каждое дело — ответственность; каждый результат — основа доверия.",
+      res_link:"Последние результаты на Facebook",
+      team_h:"Команда", team_note:"Опытные адвокаты, защищающие ваши интересы.",
+      tm1_n:"Лазаре Какушадзе", tm2_n:"Вахтанг Квижинадзе", tm3_n:"Гиорги Самушия",
+      role:"Управляющий партнёр · Адвокат",
+      tm2_s:"Уголовное, гражданское и административное право",
+      tm3_s:"Уголовное право",
+      ct_h:"Поговорите с адвокатом сегодня",
+      ct_lede:"Напишите или позвоните для первой консультации. Отвечаем 24/7 — на грузинском и английском языках.",
+      wa_btn:"Напишите нам в WhatsApp", fb_btn:"Напишите в Facebook",
+      reply_note:"Обычно отвечаем в течение 15 минут",
+      ct_phone:"Телефон", ct_mail:"Эл. почта", ct_office:"Офис",
+      ct_addr:"ул. Луарсаба Андроникашвили, 1а", ct_city:"Тбилиси, Грузия",
+      foot_tag:"Полное правовое сопровождение — гражданское · административное · уголовное право"
+    }
+  };
+
+  /* snapshot English from the authored DOM so switching back is lossless */
+  var en = { doc_title: document.title };
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    var k = el.getAttribute('data-i18n');
+    if (!(k in en)) en[k] = el.textContent;
+  });
+  I18N.en = en;
+
+  var LANGS = ['en','ka','ru'];
+  var lang = localStorage.getItem('ksk-lang');
+  if (LANGS.indexOf(lang) === -1) lang = 'en';
+
+  function applyLang(next){
+    lang = next;
+    localStorage.setItem('ksk-lang', lang);
+    var dict = I18N[lang];
+    document.documentElement.lang = lang;
+    document.title = dict.doc_title;
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      var k = el.getAttribute('data-i18n');
+      if (dict[k] != null) el.textContent = dict[k];
+    });
+    document.querySelectorAll('.lang-b').forEach(function(el){
+      el.classList.toggle('is-on', el.getAttribute('data-lang') === lang);
+    });
+  }
+
+  document.querySelectorAll('.lang-b').forEach(function(el){
+    el.addEventListener('click', function(){ applyLang(el.getAttribute('data-lang')); });
+  });
+
+  if (lang !== 'en') applyLang(lang);
 })();
 </script>
 </body>
