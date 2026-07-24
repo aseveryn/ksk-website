@@ -34,6 +34,7 @@
       form_note: "ან დაგვიკავშირდით პირდაპირ",
       ct_hours: "ღია ვართ 24/7",
       fab_call: "დარეკვა",
+      wa_msg: "გამარჯობა! მჭირდება იურიდიული კონსულტაცია.",
       hero_kicker: "იურიდიული კომპანია · თბილისი",
       hero_l1: "თქვენი უფლებები.",
       hero_l2: "ჩვენი საქმე.",
@@ -134,6 +135,7 @@
       form_note: "Or reach us directly",
       ct_hours: "Open 24/7",
       fab_call: "Call",
+      wa_msg: "Hello! I need a legal consultation.",
       hero_kicker: "Law Firm · Tbilisi",
       hero_l1: "Your rights.",
       hero_l2: "Our case.",
@@ -234,6 +236,7 @@
       form_note: "Или свяжитесь напрямую",
       ct_hours: "Открыты 24/7",
       fab_call: "Позвонить",
+      wa_msg: "Здравствуйте! Мне нужна юридическая консультация.",
       hero_kicker: "Юридическая компания · Тбилиси",
       hero_l1: "Ваши права.",
       hero_l2: "Наше дело.",
@@ -321,6 +324,8 @@
       const key = el.getAttribute("data-i18n");
       if (dict[key]) el.textContent = dict[key];
     });
+    var waHref = "https://wa.me/995571100022?text=" + encodeURIComponent(dict.wa_msg);
+    document.querySelectorAll(".wa-link").forEach(function (el) { el.href = waHref; });
     document.querySelectorAll(".lang-opt").forEach(function (el) {
       el.classList.toggle("is-active", el.getAttribute("data-lang") === lang);
     });
@@ -336,7 +341,7 @@
     }
   });
 
-  if (lang !== "ka") applyLang(lang);
+  applyLang(lang);
 
   /* ── header state on scroll ───────────────────────────── */
   const header = document.querySelector(".site-header");
