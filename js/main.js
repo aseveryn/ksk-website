@@ -63,6 +63,8 @@
       tm1_r: "მმართველი პარტნიორი · ადვოკატი",
       tm2_n: "ვახტანგ კვიჟინაძე",
       tm2_r: "მმართველი პარტნიორი · ადვოკატი",
+      tm3_n: "გიორგი სამუშია",
+      tm3_r: "მმართველი პარტნიორი · ადვოკატი",
       contact_title: "დაგვიკავშირდით",
       contact_sub: "პირველი კონსულტაციისთვის მოგვწერეთ ან დაგვირეკეთ — ვმუშაობთ 24/7.",
       ct_phone: "ტელეფონი",
@@ -72,8 +74,7 @@
       ct_city: "თბილისი, საქართველო",
       ct_fb: "გამოგვყევით სიახლეებისთვის",
       footer_tag: "სრული სამართლებრივი მხარდაჭერა — სამოქალაქო · ადმინისტრაციული · სისხლის სამართალი",
-      doc_title: "KSK Consulting Group — იურიდიული კომპანია | თბილისი",
-      mono_initials: "ვკ"
+      doc_title: "KSK Consulting Group — იურიდიული კომპანია | თბილისი"
     },
     en: {
       nav_about: "About",
@@ -133,6 +134,8 @@
       tm1_r: "Managing Partner · Advocate",
       tm2_n: "Vakhtang Kvizhinadze",
       tm2_r: "Managing Partner · Advocate",
+      tm3_n: "Giorgi Samushia",
+      tm3_r: "Managing Partner · Advocate",
       contact_title: "Get in touch",
       contact_sub: "Call or write to us for your first consultation — we work 24/7.",
       ct_phone: "Phone",
@@ -142,8 +145,7 @@
       ct_city: "Tbilisi, Georgia",
       ct_fb: "Follow us for updates",
       footer_tag: "Full legal support — civil · administrative · criminal law",
-      doc_title: "KSK Consulting Group — Law Firm | Tbilisi",
-      mono_initials: "VK"
+      doc_title: "KSK Consulting Group — Law Firm | Tbilisi"
     },
     ru: {
       nav_about: "О нас",
@@ -203,6 +205,8 @@
       tm1_r: "Управляющий партнёр · Адвокат",
       tm2_n: "Вахтанг Квижинадзе",
       tm2_r: "Управляющий партнёр · Адвокат",
+      tm3_n: "Гиорги Самушия",
+      tm3_r: "Управляющий партнёр · Адвокат",
       contact_title: "Свяжитесь с нами",
       contact_sub: "Позвоните или напишите нам для первой консультации — работаем 24/7.",
       ct_phone: "Телефон",
@@ -212,8 +216,7 @@
       ct_city: "Тбилиси, Грузия",
       ct_fb: "Подписывайтесь на новости",
       footer_tag: "Полное правовое сопровождение — гражданское · административное · уголовное право",
-      doc_title: "KSK Consulting Group — Юридическая компания | Тбилиси",
-      mono_initials: "ВК"
+      doc_title: "KSK Consulting Group — Юридическая компания | Тбилиси"
     }
   };
 
@@ -231,8 +234,6 @@
       const key = el.getAttribute("data-i18n");
       if (dict[key]) el.textContent = dict[key];
     });
-    const mono = document.querySelector(".mono-initials");
-    if (mono) mono.textContent = dict.mono_initials;
     document.querySelectorAll(".lang-opt").forEach(function (el) {
       el.classList.toggle("is-active", el.getAttribute("data-lang") === lang);
     });
