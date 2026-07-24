@@ -511,7 +511,7 @@ html.js-anim .rv.in{opacity:1;transform:none}
 
   var LANGS = ['en','ka','ru'];
   var lang = localStorage.getItem('ksk-lang');
-  if (LANGS.indexOf(lang) === -1) lang = 'en';
+  if (LANGS.indexOf(lang) === -1) lang = 'ka';
 
   function applyLang(next){
     lang = next;
@@ -532,7 +532,7 @@ html.js-anim .rv.in{opacity:1;transform:none}
     el.addEventListener('click', function(){ applyLang(el.getAttribute('data-lang')); });
   });
 
-  if (lang !== 'en') applyLang(lang);
+  applyLang(lang);
 })();
 </script>
 </body>
