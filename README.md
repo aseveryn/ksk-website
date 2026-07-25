@@ -3,7 +3,7 @@
 Website for [KSK Consulting Group](https://www.facebook.com/people/KSK-Consulting-Group/61569291357729/),
 a law firm in Tbilisi, Georgia (civil, administrative and criminal law + corporate counsel).
 
-**Live:** https://aseveryn.github.io/ksk-website/
+**Live:** https://ksk.ge (GitHub Pages; aseveryn.github.io/ksk-website redirects here)
 
 ## Stack
 
@@ -27,9 +27,10 @@ All copy lives in `index.html`:
 - Georgian/Russian translations are in the `I18N` dictionaries in the inline script at the bottom
 - When adding text, tag the element with `data-i18n="key"` and add the key to both `ka` and `ru` dictionaries
 
-## Domain (status 2026-07)
+## Domain
 
-`ksk.ge` is registered via **namespace.ge** but **expired 2026-07-08** (status: Inactive) —
-the firm should renew it there, then point DNS at GitHub Pages
-(A records → `185.199.108-111.153`, `www` CNAME → `aseveryn.github.io`) and set the
-custom domain in repo settings. Note: `@ksk.ge` email has no MX records until the domain is restored.
+`ksk.ge` — registered at **namespace.ge**, paid through **2031-07-07**.
+DNS (managed in the namespace.ge panel): apex `A → 185.199.108.153` (GitHub Pages;
+the panel only permits one A record per name), `www` CNAME → apex,
+`MX → SMTP.GOOGLE.COM` (the firm's Google Workspace email — do not remove).
+HTTPS via GitHub-managed Let's Encrypt cert, enforced.
