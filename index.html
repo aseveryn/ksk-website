@@ -99,9 +99,9 @@ a{color:inherit}
 .about-tag{position:absolute;bottom:-1px;left:-1px;padding:12px 18px;background:var(--paper);font:500 11px/1 var(--mono);letter-spacing:.16em;color:rgba(21,20,15,.5)}
 .sec-h2{font:400 46px/1.1 var(--serif);letter-spacing:-.015em;text-wrap:balance}
 .lede{margin:22px 0 0;font:400 16px/1.7 var(--sans);color:rgba(21,20,15,.72);max-width:520px}
-.pillars{margin-top:34px}
+.pillars{grid-column:1/-1;margin-top:6px;display:grid;grid-template-columns:repeat(3,1fr);gap:0 40px}
 .pillar{display:grid;grid-template-columns:64px 1fr;gap:18px;padding:20px 0;border-top:1px solid rgba(21,20,15,.14)}
-.pillar:last-child{border-bottom:1px solid rgba(21,20,15,.14)}
+
 .pillar i{font:500 11px/1.5 var(--mono);color:var(--accent);font-style:normal}
 .pillar b{font:600 14.5px/1.3 var(--sans)}
 .pillar p{margin:6px 0 0;font:400 14px/1.6 var(--sans);color:rgba(21,20,15,.62)}
@@ -186,6 +186,7 @@ html.js-anim .rv.in{opacity:1;transform:none}
   .nav{display:none}
   .hero h1{font-size:56px}
   .about,.results,.contact{grid-template-columns:1fr;gap:40px}
+  .pillars{grid-template-columns:1fr;gap:0}
   .stats{grid-template-columns:repeat(2,1fr)}
   .stat:nth-child(2){border-right:0}
   .stat:nth-child(-n+2){border-bottom:1px solid rgba(247,244,238,.14)}
@@ -274,11 +275,11 @@ html.js-anim .rv.in{opacity:1;transform:none}
   <div>
     <h2 class="sec-h2 rv" data-i18n="about_h">A firm that stands on your side</h2>
     <p class="lede rv" data-i18n="about_lede">KSK Consulting Group provides full legal support in civil, administrative and criminal matters, and advises businesses on strategic planning and corporate structure — from a single filing to long-term outside counsel.</p>
-    <div class="pillars">
-      <div class="pillar rv"><i>i</i><div><b data-i18n="p1_t">Court representation</b><p data-i18n="p1_d">Defence and representation before courts of every instance in Georgia.</p></div></div>
-      <div class="pillar rv"><i>ii</i><div><b data-i18n="p2_t">Business support</b><p data-i18n="p2_d">Legal outsourcing and corporate services for companies of any size.</p></div></div>
-      <div class="pillar rv"><i>iii</i><div><b data-i18n="p3_t">Reachable 24/7</b><p data-i18n="p3_d">Urgent matters do not wait. Neither do we.</p></div></div>
-    </div>
+  </div>
+  <div class="pillars">
+    <div class="pillar rv"><i>i</i><div><b data-i18n="p1_t">Court representation</b><p data-i18n="p1_d">Defence and representation before courts of every instance in Georgia.</p></div></div>
+    <div class="pillar rv"><i>ii</i><div><b data-i18n="p2_t">Business support</b><p data-i18n="p2_d">Legal outsourcing and corporate services for companies of any size.</p></div></div>
+    <div class="pillar rv"><i>iii</i><div><b data-i18n="p3_t">Reachable 24/7</b><p data-i18n="p3_d">Urgent matters do not wait. Neither do we.</p></div></div>
   </div>
 </section>
 
