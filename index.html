@@ -7,8 +7,19 @@
 <meta name="description" content="KSK Consulting Group — a Tbilisi law firm providing full legal support in civil, administrative and criminal matters, with corporate counsel for businesses in Georgia.">
 <meta property="og:title" content="KSK Consulting Group — Law Firm in Tbilisi">
 <meta property="og:description" content="Full legal support in civil, administrative and criminal matters, plus corporate counsel.">
-<meta property="og:image" content="assets/img/logo.png">
+<meta property="og:image" content="https://ksk.ge/assets/img/hero-court.jpg">
 <link rel="icon" type="image/png" href="assets/img/logo.png">
+<link rel="canonical" href="https://ksk.ge/">
+<meta property="og:url" content="https://ksk.ge/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KSK Consulting Group">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="KSK Consulting Group — Law Firm in Tbilisi">
+<meta name="twitter:image" content="https://ksk.ge/assets/img/hero-court.jpg">
+<link rel="alternate" hreflang="ka" href="https://ksk.ge/">
+<link rel="alternate" hreflang="en" href="https://ksk.ge/?lang=en">
+<link rel="alternate" hreflang="ru" href="https://ksk.ge/?lang=ru">
+<link rel="alternate" hreflang="x-default" href="https://ksk.ge/">
 <script>
   if (window.IntersectionObserver && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.documentElement.className += ' js-anim';
@@ -48,7 +59,7 @@ a{color:inherit}
 .head-right{display:flex;align-items:center;gap:14px}
 .langs{font:500 11px/1 var(--mono);letter-spacing:.1em;color:rgba(21,20,15,.45)}
 .langs span{color:rgba(21,20,15,.28)}
-.lang-b{cursor:pointer;font-weight:500;color:rgba(21,20,15,.45);transition:color .2s}
+.lang-b{cursor:pointer;text-decoration:none;font-weight:500;color:rgba(21,20,15,.45);transition:color .2s}
 .lang-b:hover{color:var(--ink)}
 .lang-b.is-on{color:var(--accent);font-weight:600}
 .wa{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;background:var(--accent);color:#fdfbf7;text-decoration:none;font:600 12px/1 var(--sans);letter-spacing:.03em;transition:background .2s,transform .2s}
@@ -191,6 +202,33 @@ html.js-anim .rv.in{opacity:1;transform:none}
   .crow{grid-template-columns:1fr;gap:6px}
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "KSK Consulting Group",
+  "url": "https://ksk.ge/",
+  "logo": "https://ksk.ge/assets/img/logo.png",
+  "image": "https://ksk.ge/assets/img/hero-court.jpg",
+  "telephone": "+995571100022",
+  "email": "info@ksk.ge",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1a Luarsab Andronikashvili St.",
+    "addressLocality": "Tbilisi",
+    "addressCountry": "GE"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "sameAs": ["https://www.facebook.com/people/KSK-Consulting-Group/61569291357729/"],
+  "areaServed": "Georgia",
+  "knowsLanguage": ["ka","en","ru"]
+}
+</script>
 </head>
 <body>
 
@@ -200,14 +238,14 @@ html.js-anim .rv.in{opacity:1;transform:none}
     <a href="#about" data-i18n="nav_about">About</a><a href="#practice" data-i18n="nav_practice">Practice</a><a href="#services" data-i18n="nav_services">Services</a><a href="#team" data-i18n="nav_team">Team</a><a href="#contact" data-i18n="nav_contact">Contact</a>
   </nav>
   <div class="head-right">
-    <span class="langs"><b class="lang-b is-on" data-lang="en">EN</b><span> / </span><b class="lang-b" data-lang="ka">GE</b><span> / </span><b class="lang-b" data-lang="ru">RU</b></span>
+    <span class="langs"><a class="lang-b" href="?lang=en" data-lang="en">EN</a><span> / </span><a class="lang-b is-on" href="./" data-lang="ka">GE</a><span> / </span><a class="lang-b" href="?lang=ru" data-lang="ru">RU</a></span>
     <a class="msgr" href="https://m.me/61569291357729" target="_blank" rel="noopener">Messenger</a>
     <a class="wa" href="https://wa.me/995571100022" target="_blank" rel="noopener"><span class="dot"></span><span data-i18n="wa_us">WhatsApp us</span></a>
   </div>
 </header>
 
 <section class="hero" id="top">
-  <div class="hero-bg"><img data-px="0.06" src="assets/img/hero-court.jpg" alt=""></div>
+  <div class="hero-bg"><img data-px="0.06" src="assets/img/hero-court.jpg" alt="" fetchpriority="high"></div>
   <div class="hero-veil"></div>
   <div class="hero-body">
     <div class="hero-kicker rv"><i></i><span data-i18n="hero_kicker">Law firm · Tbilisi, Georgia</span></div>
@@ -229,7 +267,7 @@ html.js-anim .rv.in{opacity:1;transform:none}
 
 <section class="about" id="about">
   <figure class="about-fig rv" style="margin:0">
-    <img src="assets/img/team-meeting.jpg" alt="KSK Consulting Group team in a working meeting">
+    <img src="assets/img/team-meeting.jpg" alt="KSK Consulting Group team in a working meeting" loading="lazy" decoding="async">
     <figcaption class="about-tag" data-i18n="about_tag">01 — ABOUT</figcaption>
   </figure>
   <div>
@@ -286,15 +324,15 @@ html.js-anim .rv.in{opacity:1;transform:none}
     <p class="rv" data-i18n="res_p">Cases conducted by our team are resolved in the courts of Georgia — including the civil and criminal chambers of the Tbilisi and Rustavi City Courts. Every case is a responsibility; every result, a foundation of trust.</p>
     <a class="link-accent rv" href="https://www.facebook.com/people/KSK-Consulting-Group/61569291357729/" target="_blank" rel="noopener"><span data-i18n="res_link">Recent results on Facebook</span>&nbsp;<span class="mono">↗</span></a>
   </div>
-  <div class="results-fig"><img src="assets/img/case-won.jpg" alt="A successfully concluded case — KSK Consulting Group"></div>
+  <div class="results-fig"><img src="assets/img/case-won.jpg" alt="A successfully concluded case — KSK Consulting Group" loading="lazy" decoding="async"></div>
 </section>
 
 <section class="team" id="team">
   <div class="sec-head sec-rule rv"><span class="kicker">05</span><h2 data-i18n="team_h">The team</h2><span class="team-note" data-i18n="team_note">Experienced attorneys defending your interests.</span></div>
   <div class="tgrid">
-    <div class="tcard rv"><figure><img src="assets/img/partner-desk.jpg" alt="Lazare Kakushadze"></figure><h3 data-i18n="tm1_n">Lazare Kakushadze</h3><div class="trole" data-i18n="role">Managing partner · Attorney</div><p data-i18n="tm1_s">Civil law</p></div>
-    <div class="tcard rv"><figure><img src="assets/img/vakhtang.jpg" alt="Vakhtang Kvizhinadze"></figure><h3 data-i18n="tm2_n">Vakhtang Kvizhinadze</h3><div class="trole" data-i18n="role">Managing partner · Attorney</div><p data-i18n="tm2_s">Criminal, civil and administrative law</p></div>
-    <div class="tcard rv"><figure><img src="assets/img/giorgi.jpg" alt="Giorgi Samushia"></figure><h3 data-i18n="tm3_n">Giorgi Samushia</h3><div class="trole" data-i18n="role">Managing partner · Attorney</div><p data-i18n="tm3_s">Criminal law</p></div>
+    <div class="tcard rv"><figure><img src="assets/img/partner-desk.jpg" alt="Lazare Kakushadze" loading="lazy" decoding="async"></figure><h3 data-i18n="tm1_n">Lazare Kakushadze</h3><div class="trole" data-i18n="role">Managing partner · Attorney</div><p data-i18n="tm1_s">Civil law</p></div>
+    <div class="tcard rv"><figure><img src="assets/img/vakhtang.jpg" alt="Vakhtang Kvizhinadze" loading="lazy" decoding="async"></figure><h3 data-i18n="tm2_n">Vakhtang Kvizhinadze</h3><div class="trole" data-i18n="role">Managing partner · Attorney</div><p data-i18n="tm2_s">Criminal, civil and administrative law</p></div>
+    <div class="tcard rv"><figure><img src="assets/img/giorgi.jpg" alt="Giorgi Samushia" loading="lazy" decoding="async"></figure><h3 data-i18n="tm3_n">Giorgi Samushia</h3><div class="trole" data-i18n="role">Managing partner · Attorney</div><p data-i18n="tm3_s">Criminal law</p></div>
   </div>
 </section>
 
@@ -394,6 +432,7 @@ html.js-anim .rv.in{opacity:1;transform:none}
     en: null, /* built from the DOM on first run */
     ka: {
       doc_title:"KSK Consulting Group — იურიდიული კომპანია თბილისში",
+      doc_desc:"KSK Consulting Group — იურიდიული კომპანია თბილისში. სრული სამართლებრივი მხარდაჭერა სამოქალაქო, ადმინისტრაციულ და სისხლის სამართლის საქმეებში; კორპორატიული მომსახურება ბიზნესისთვის.",
       nav_about:"ჩვენ შესახებ", nav_practice:"მიმართულებები", nav_services:"მომსახურება", nav_team:"გუნდი", nav_contact:"კონტაქტი",
       wa_us:"მოგვწერეთ WhatsApp-ში",
       hero_kicker:"იურიდიული კომპანია · თბილისი, საქართველო",
@@ -449,6 +488,7 @@ html.js-anim .rv.in{opacity:1;transform:none}
     },
     ru: {
       doc_title:"KSK Consulting Group — Юридическая фирма в Тбилиси",
+      doc_desc:"KSK Consulting Group — юридическая фирма в Тбилиси. Полное правовое сопровождение по гражданским, административным и уголовным делам; корпоративные услуги для бизнеса.",
       nav_about:"О нас", nav_practice:"Практика", nav_services:"Услуги", nav_team:"Команда", nav_contact:"Контакты",
       wa_us:"Напишите в WhatsApp",
       hero_kicker:"Юридическая фирма · Тбилиси, Грузия",
@@ -505,7 +545,7 @@ html.js-anim .rv.in{opacity:1;transform:none}
   };
 
   /* snapshot English from the authored DOM so switching back is lossless */
-  var en = { doc_title: document.title };
+  var en = { doc_title: document.title, doc_desc: document.querySelector('meta[name="description"]').getAttribute('content') };
   document.querySelectorAll('[data-i18n]').forEach(function(el){
     var k = el.getAttribute('data-i18n');
     if (!(k in en)) en[k] = el.textContent;
@@ -513,7 +553,8 @@ html.js-anim .rv.in{opacity:1;transform:none}
   I18N.en = en;
 
   var LANGS = ['en','ka','ru'];
-  var lang = localStorage.getItem('ksk-lang');
+  var urlLang = new URLSearchParams(location.search).get('lang');
+  var lang = LANGS.indexOf(urlLang) !== -1 ? urlLang : localStorage.getItem('ksk-lang');
   if (LANGS.indexOf(lang) === -1) lang = 'ka';
 
   function applyLang(next){
@@ -522,6 +563,9 @@ html.js-anim .rv.in{opacity:1;transform:none}
     var dict = I18N[lang];
     document.documentElement.lang = lang;
     document.title = dict.doc_title;
+    var md = document.querySelector('meta[name="description"]');
+    if (md && dict.doc_desc) md.setAttribute('content', dict.doc_desc);
+    try { history.replaceState(null, '', lang === 'ka' ? location.pathname : location.pathname + '?lang=' + lang); } catch(e) {}
     document.querySelectorAll('[data-i18n]').forEach(function(el){
       var k = el.getAttribute('data-i18n');
       if (dict[k] != null) el.textContent = dict[k];
@@ -532,7 +576,7 @@ html.js-anim .rv.in{opacity:1;transform:none}
   }
 
   document.querySelectorAll('.lang-b').forEach(function(el){
-    el.addEventListener('click', function(){ applyLang(el.getAttribute('data-lang')); });
+    el.addEventListener('click', function(e){ e.preventDefault(); applyLang(el.getAttribute('data-lang')); });
   });
 
   applyLang(lang);
